@@ -1,4 +1,4 @@
 {
 	"program": "shaders/refraction.prog",
-	"cubeMap": "textures/mountain_skybox/posx.jpg textures/mountain_skybox/negx.jpg textures/mountain_skybox/posy.jpg textures/mountain_skybox/negy.jpg textures/mountain_skybox/posz.jpg textures/mountain_skybox/negz.jpg"
+	"cubeMap": "textures/nightCity/posx.jpg textures/nightCity/negx.jpg textures/nightCity/posy.jpg textures/nightCity/negy.jpg textures/nightCity/posz.jpg textures/nightCity/negz.jpg"
 }
