@@ -132,7 +132,7 @@ namespace neu {
 			ImGui::Separator();
 
 			if (normalMap) {
-				ImGui::Text("Emissive Map: %s", normalMap->name.c_str());
+				ImGui::Text("Normal Map: %s", normalMap->name.c_str());
 				Editor::ShowTexture(*normalMap, 32, 32);
 				Editor::GetDialogResource<Texture>(normalMap, "NormalMapDialog", "Open Texture", "Image (*.png; *.bmp; *.jpeg; *.jpg; *.tja;){.png, .bmp, .jpeg, .jpg, .tja},.*");
 

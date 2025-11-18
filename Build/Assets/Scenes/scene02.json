@@ -166,7 +166,27 @@
       ]
     },
     {
-      "name": "light",
+      "name": "directional light",
+      "persistent": true,
+      "transform": {
+        "position": [ 0, 5, 0 ],
+        "rotation": [ 90, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "components": [
+        {
+          "type": "LightComponent",
+          "color": [ 0, 0.5, 0.5 ],
+          "intensity": 2,
+          "range": 30,
+          "lightType": "directional",
+          "innerSpotAngle": 30.0,
+          "outerSpotAngle": 50.0
+        }
+      ]
+    },
+    {
+      "name": "spot light",
       "persistent": true,
       "transform": {
         "position": [ 0, 5, 0 ],
@@ -180,6 +200,26 @@
           "intensity": 2,
           "range": 30,
           "lightType": "spot",
+          "innerSpotAngle": 30.0,
+          "outerSpotAngle": 50.0
+        }
+      ]
+    },
+    {
+      "name": "point light",
+      "persistent": true,
+      "transform": {
+        "position": [ 0, 5, 0 ],
+        "rotation": [ 90, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "components": [
+        {
+          "type": "LightComponent",
+          "color": [ 0, 0.5, 0.5 ],
+          "intensity": 2,
+          "range": 30,
+          "lightType": "point",
           "innerSpotAngle": 30.0,
           "outerSpotAngle": 50.0
         }
