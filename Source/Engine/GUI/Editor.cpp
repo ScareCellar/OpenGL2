@@ -1,0 +1,64 @@
+#include "Editor.h"
+
+namespace neu {
+	void Editor::Begin() {
+		// start new ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplSDL3_NewFrame();
+		ImGui::NewFrame();
+	}
+
+	void Editor::UpdateGui(Scene& scene) {
+		if (ImGui::IsKeyPressed(ImGuiKey_GraveAccent)) m_active = !m_active;
+		if (!m_active) return;
+
+		ImGui::PushStyleColor(ImGuiCol_Separator, ImVec4{ 1, 1, 0, 1 });
+
+		// Scene
+		ImGui::Begin("Scene");
+		scene.UpdateGui();
+		ImGui::Separator();
+
+		// Display all actors
+		int index = 0;
+		for (auto& actor : scene.m_actors)
+		{
+			bool done = false;
+			ImGui::PushID(index++);
+			if (ImGui::Selectable(actor->name.c_str(), actor.get() == m_selected))
+			{
+				m_selected = actor.get();
+			}
+			ImGui::PopID();
+		}
+		ImGui::End();
+
+		//Assets
+		ImGui::Begin("Assets");
+
+		auto resources = Resources().GetByType();
+		index = 0;
+		for (auto resource : resources) {
+			ImGui::PushID(index++);
+			if (ImGui::Selectable(resource->name.c_str(), resource == m_selected)) {
+				m_selected = resource;
+			}
+			ImGui::PopID();
+		}
+
+		ImGui::End();
+
+		// Inspector
+		ImGui::Begin("Inspector");
+		if (m_selected) {
+			m_selected->UpdateGui();
+		}
+		ImGui::End();
+
+		ImGui::PopStyleColor();
+	}
+
+	void Editor::ShowTexture(const Texture& texture, float width, float height) {
+		ImGui::Image((ImTextureID)texture.m_texture, ImVec2{ width, height });
+	}
+}

@@ -1,0 +1,31 @@
+#pragma once
+
+namespace neu {
+	class LightComponent : public Component
+	{
+	public:
+		enum class LightType {
+			Point,
+			Directional,
+			Spot
+		};
+
+	public:
+		CLASS_PROTOTYPE(LightComponent)
+
+		void Update(float dt) override;
+		void SetProgram(Program& program, const std::string& name, const glm::mat4& view);
+
+		void Read(const serial_data_t& value) override;
+		void UpdateGui() override;
+
+	public:
+		glm::vec3 color{ 1, 1, 1 };
+		float intensity;
+		float range{ 20 };
+
+		LightType lightType{ LightType::Point };
+		float innerSpotAngle = 30.0f;
+		float outerSpotAngle = 30.0f;
+	};
+}

@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{7d2ce0eb-c054-4fe8-a9fe-1efa54b53c25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{e876f693-b051-42e4-9647-b8d4b6d36b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Textures">
+      <UniqueIdentifier>{b19c6153-bcf7-4480-8d4f-c437d508899a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Materials">
+      <UniqueIdentifier>{ec0f0494-44df-4d23-89ba-ee4fd2656c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Scenes">
+      <UniqueIdentifier>{a6af42af-945e-4ca9-ac51-faa4699552af}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationPCH.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApplicationPCH.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Build\Assets\Shaders\basic.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_lit.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_lit.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_lit.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\spot.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_phong.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_phong.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\basic_phong.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Scenes\scene01.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Scenes\scene02.json">
+      <Filter>Assets\Scenes</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\ground.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\crate.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\skybox.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\skybox.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\skybox.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\cubemap.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\reflection.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\refraction.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\refraction.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\reflection.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\reflection.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\refraction.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\unlit.prog">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\unlit.vert">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Shaders\unlit.frag">
+      <Filter>Assets\Shaders</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Materials\rtt.mat">
+      <Filter>Assets\Materials</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Build\Assets\Textures\beast.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\..\Build\Assets\Textures\spot_diffuse.png">
+      <Filter>Assets\Textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
