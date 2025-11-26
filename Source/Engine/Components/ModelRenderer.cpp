@@ -13,8 +13,22 @@ namespace neu {
 			material->Bind();
 			material->program->SetUniform("u_model", owner->transform.GetMatrix());
 		}
+
 		glDepthMask(enableDepth);
 		glCullFace(cullFace);
+		
+		if (model) {
+			model->Draw(GL_TRIANGLES);
+		}
+	}
+
+	void ModelRenderer::DrawShadow(Renderer& renderer, Program& program)
+	{
+		program.SetUniform("u_model", owner->transform.GetMatrix());
+		
+		glDepthMask(enableDepth);
+		glCullFace(cullFace);
+		
 		if (model) {
 			model->Draw(GL_TRIANGLES);
 		}

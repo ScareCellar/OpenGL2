@@ -1,5 +1,23 @@
 {
+  "post_process": false,
   "actors": [
+    {
+      "name": "plane",
+      "persistent": true,
+      "transform": {
+        "position": [ 0, -1, 0 ],
+        "rotation": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "components": [
+        {
+          "type": "ModelRenderer",
+          "model": "models/plane.obj",
+          "material": "materials/ground.mat"
+        }
+      ]
+
+    },
     {
       "name": "cow",
       "persistent": true,
@@ -25,6 +43,64 @@
           "type": "ModelRenderer",
           "model": "models/spot.obj",
           "material": "materials/spot.mat"
+        },
+        {
+          "type": "RotationComponent",
+          "rotate": [ 30, 0, 30 ]
+        }
+      ]
+    },
+    {
+      "name": "screen",
+      "persistent": true,
+      "transform": {
+        "position": [
+          0,
+          5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "components": [
+        {
+          "type": "ModelRenderer",
+          "model": "models/quad.obj",
+          "material": "materials/shadow.mat"
+        }
+      ]
+    },
+    {
+      "name": "directional light",
+      "persistent": true,
+      "transform": {
+        "position": [ 0, 10, 0 ],
+        "rotation": [ -90, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "components": [
+        {
+          "type": "LightComponent",
+          "color": [ 0.5, 0.5, 0.5 ],
+          "intensity": 2,
+          "range": 30,
+          "lightType": "directional",
+          "shadowCaster": false
+        },
+        {
+          "type": "CameraComponent",
+          "active": false,
+          "projectionType": "orthographic",
+          "shadowCamera": true,
+          "outputTexture": "shadowTexture"
         }
       ]
     },
@@ -44,21 +120,6 @@
           "type": "FirstPersonController",
           "speed": 5,
           "sensitivity": 0.2
-        }
-      ]
-    },
-    {
-      "name": "light",
-      "persistent": true,
-      "transform": {
-        "position": [ 5, 5, 0 ],
-        "rotation": [ 0, 0, 0 ],
-        "scale": [ 1, 1, 1 ]
-      },
-      "components": [
-        {
-          "type": "LightComponent",
-          "color": [ 0, 0, 0 ]
         }
       ]
     }

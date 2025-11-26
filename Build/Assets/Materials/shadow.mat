@@ -1,0 +1,7 @@
+{
+  "program": "shaders/depth.prog",
+  "baseMap": "shadowTexture",
+  "baseColor": [ 1, 0, 1 ],
+  "tiling": [ 1, 1 ],
+  "offset": [ 0, 0 ]
+}

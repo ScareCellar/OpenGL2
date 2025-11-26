@@ -20,6 +20,7 @@ namespace neu {
 		program.SetUniform(name + ".range", range);
 		program.SetUniform(name + ".outerSpotAngle", glm::radians(outerSpotAngle));
 		program.SetUniform(name + ".innerSpotAngle", glm::radians(innerSpotAngle));
+		program.SetUniform(name + ".shadowCaster", shadowCaster);
 	}
 
 	void LightComponent::Read(const serial_data_t& value) {
@@ -34,6 +35,7 @@ namespace neu {
 		SERIAL_READ(value, range);
 		SERIAL_READ(value, outerSpotAngle);
 		SERIAL_READ(value, innerSpotAngle);
+		SERIAL_READ(value, shadowCaster);
 	}
 
 	void LightComponent::UpdateGui() {
@@ -53,5 +55,7 @@ namespace neu {
 
 			outerSpotAngle = math::max(innerSpotAngle, outerSpotAngle);
 		}
+
+		ImGui::Checkbox("Shadow Caster", &shadowCaster);
 	}
 }
