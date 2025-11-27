@@ -1,4 +1,5 @@
 {
+  "post_process": false,
   "actors": [
     {
       "name": "skybox",

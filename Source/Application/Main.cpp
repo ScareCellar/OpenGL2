@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
 
     auto shadowTexture = std::make_shared<neu::RenderTexture>();
     shadowTexture->CreateDepth(512, 512);
-    neu::Resources().AddResource("shadowTexture", shadowTexture);
+    neu::Resources().AddResource("shadowTexture", renderTexture);
 
     auto postProcessTexture = std::make_shared<neu::RenderTexture>();
     postProcessTexture->Create(1024, 1024);

@@ -19,13 +19,10 @@ namespace neu {
 		glClearColor(backgroundColor.r, backgroundColor.g, backgroundColor.b, 1);
 
 		GLbitfield bits = 0;
-		if (clearColorBuffer) {
-			bits |= GL_COLOR_BUFFER_BIT;
-		}
-		if (clearDepthBuffer) {
-			bits |= GL_DEPTH_BUFFER_BIT;
-		}
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		if (clearColorBuffer) bits |= GL_COLOR_BUFFER_BIT;
+		if (clearDepthBuffer) bits |= GL_DEPTH_BUFFER_BIT;
+
+		glClear(bits);
 	}
 
 	void CameraComponent::SetPerspective(float fov, float aspect, float near, float far) {
