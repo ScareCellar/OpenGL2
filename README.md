@@ -1,4 +1,4 @@
-# OpenGL Engine (Neumont) — README
+# OpenGL Engine — README
 
 Overview
 --------
